@@ -1,7 +1,7 @@
 Setup Instructions: 
 1) Clone the Repository
    git clone https://github.com/Sivani-R/candidate-data.git
-   cd my-candidates-app
+   cd candidate-data
 2) Backend Setup
    cd backend
    npm install
