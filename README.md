@@ -7,7 +7,7 @@ Setup Instructions:
    # npm install
    # node app.js
 Ensure MongoDB is running and accessible at mongodb://localhost:27017/candidatesDB.
-4) Frontend Setup
+3) Frontend Setup
    # cd frontend
    # npm install
    # npm start
