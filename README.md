@@ -1,16 +1,16 @@
 Setup Instructions: 
 1) Clone the Repository
-   git clone https://github.com/Sivani-R/candidate-data.git
-   cd candidate-data
+   # git clone https://github.com/Sivani-R/candidate-data.git
+   # cd candidate-data
 2) Backend Setup
-   cd backend
-   npm install
-   node app.js
+   # cd backend
+   # npm install
+   # node app.js
 Ensure MongoDB is running and accessible at mongodb://localhost:27017/candidatesDB.
 4) Frontend Setup
-   cd frontend
-   npm install
-   npm start
+   # cd frontend
+   # npm install
+   # npm start
 The frontend should be accessible at http://localhost:3000.
 
 Usage
