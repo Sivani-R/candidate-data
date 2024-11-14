@@ -11,12 +11,15 @@ function Filter({ onFilter }) {
       ...filterCriteria,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const applyFilter = () => {
     onFilter(filterCriteria);
   };
 
   return (
     <div className="filter">
-      <select name="gender" onChange={handleChange}>
+      <select name="gender" onChange={handleChange} value={filterCriteria.gender}>
         <option value="">Select Gender</option>
         <option value="Male">Male</option>
         <option value="Female">Female</option>
@@ -27,9 +30,14 @@ function Filter({ onFilter }) {
         name="skills"
         placeholder="Skills"
         onChange={handleChange}
+        value={filterCriteria.skills}
       />
+      <button onClick={applyFilter}>Apply Filter</button>
     </div>
   );
 }
 
 export default Filter;
+
+
+

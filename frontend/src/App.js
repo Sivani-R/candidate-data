@@ -15,7 +15,7 @@ function App() {
     fetch('http://localhost:5000/api/candidates')
       .then(res => res.json())
       .then(data => {
-        console.log('Fetched candidates:', data); 
+        console.log('Fetched candidates:', data); // Log fetched data
         setCandidates(data);
         setFilteredCandidates(data);
       })
@@ -32,10 +32,11 @@ function App() {
   };
 
   const handleFilter = (filterCriteria) => {
-    const filtered = candidates.filter(candidate =>
-      (!filterCriteria.gender || candidate.gender === filterCriteria.gender) &&
-      (!filterCriteria.skills || candidate.skills.includes(filterCriteria.skills))
-    );
+    const filtered = candidates.filter(candidate => {
+      const genderMatch = !filterCriteria.gender || candidate.gender === filterCriteria.gender;
+      const skillsMatch = !filterCriteria.skills || candidate.skills.includes(filterCriteria.skills);
+      return genderMatch && skillsMatch;
+    });
     setFilteredCandidates(filtered);
   };
 
